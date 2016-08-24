@@ -1,0 +1,19 @@
+{
+  "name": "grace-vue-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "a boilerplate for vue-webpack-project run on koa-grace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thunf/grace-vue-webpack-boilerplate.git"
+  },
+  "author": "THUNF",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thunf/grace-vue-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Thunf/grace-vue-webpack-boilerplate#readme"
+}
