@@ -1,6 +1,6 @@
 <template>
     <div id="demo">
-        <img class="logo" src="/test_boilerplate/static/image/logo-grace.png" width="100%">
+        <img class="logo" src="/grace_boilerplate/static/image/logo-grace.png" width="100%">
         <p>
             Welcome to start your app with Koa-grace!
         </p>

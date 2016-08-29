@@ -2,7 +2,7 @@
 
 const path = require('path')
 
-const mod = 'test_boilerplate';
+const mod = 'grace_boilerplate';
 const app = path.resolve(__dirname, `../../../server/app/${mod}`);
 
 module.exports = {
