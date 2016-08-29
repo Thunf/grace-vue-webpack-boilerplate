@@ -15,7 +15,7 @@
         </p>
         <p>
             If you have any issues with the setup, please file an issue at this boilerplate's
-            <a href="https://github.com/vuejs-templates/webpack" target="_blank">repository</a>.
+            <a href="https://github.com/Thunf/grace-vue-webpack-boilerplate" target="_blank">repository</a>.
         </p>
     </div>
 </template>
