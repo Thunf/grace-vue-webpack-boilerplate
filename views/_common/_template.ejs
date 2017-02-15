@@ -1,0 +1,21 @@
+{% extends "../_common/layout.html" %} 
+
+{% block "block_custom_css" %}
+<link href="{{constant.cdn}}/<%= htmlWebpackPlugin.options.module %>/static/image/favicon.ico" type="image/x-icon" rel="icon" />
+<% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+<% } %>
+{% endblock %} 
+
+{% block "block_custom_js" %}
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+{% endblock %} 
+
+{% block "content" %}
+
+    <!-- 页面入口 -->
+    <div id="app"></div>
+
+{% endblock %}

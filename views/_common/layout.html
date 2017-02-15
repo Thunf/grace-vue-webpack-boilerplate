@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+{% spaceless %}
+<head>
+    {% include "head.html" %}
+    {% block "block_custom_css" %}{% endblock %}
+</head>
+<body>
+
+    <div class="content">
+        {% block "content" %}{% endblock %}
+    </div>
+
+    {% include "footer.html" %}
+
+    <script type="text/javascript"> var CONSTANT = {};
+        CONSTANT.pageData = {{ JSON.stringify(pageData || {}) }} ;
+    </script>
+
+    {% block "block_custom_js" %}{% endblock %}
+
+    {% include "foothook.html" %}
+
+</body>
+{% endspaceless %}
+</html>
