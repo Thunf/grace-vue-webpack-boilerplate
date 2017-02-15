@@ -1,3 +1,5 @@
+**Compatibility** Note: This branch works with Vue.js 1.x .
+
 # grace-vue-webpack-boilerplate
 
 > a boilerplate for vue-webpack-project run on [koa-grace](https://github.com/xiongwilee/koa-grace)
