@@ -72,7 +72,8 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('vues'), resolve('test')]
+        include: [resolve('vues'), resolve('test')],
+        exclude: [resolve('node_modules')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

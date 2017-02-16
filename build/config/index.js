@@ -1,17 +1,21 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
-var merge = require('webpack-merge')
-var projectRoot = path.resolve(__dirname, '../..')
+var projectRoot = path.resolve(__dirname, '../..'),
+    graceRoot = path.resolve(projectRoot, '../..');
+
+/**
+ * Check for server folder & get its path
+ * @value graceServer 
+ * @params serverRoot
+ * @params serverJson
+ */
+var graceServer = require('../check-server')(graceRoot)
 
 var baseConf = {
       // Get module name automatically OR set manually
-      moduleName: path.basename(path.resolve(__dirname, '../..')),
+      moduleName: path.basename(projectRoot),
       projectRoot: projectRoot,
-      outputRoot: (function(){
-        var arr = projectRoot.split('/'); 
-        arr.splice(-2, 0, 'server'); 
-        return arr.join('/') 
-      })(),
+      outputRoot: path.resolve(graceServer.serverRoot, path.relative(graceRoot, projectRoot)),
       entryTemplate: path.resolve(projectRoot, 'views/_common/_template.ejs')
     },
     buildConf = {
@@ -19,7 +23,7 @@ var baseConf = {
       assetsRoot: baseConf.outputRoot,
       assetsPublicPath: path.resolve('/', baseConf.moduleName) + '/',
       assetsSubDirectory: 'static',
-      productionSourceMap: !!process.env.npm_config_map
+      productionSourceMap: false || !!process.env.npm_config_map
     },
     devConf = {
       env: require('./dev.env'),
