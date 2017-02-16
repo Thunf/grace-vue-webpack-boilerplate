@@ -25,17 +25,16 @@ shell.config.silent = true
 shell.cp('-R', 'static/*', assetsPath)
 shell.config.silent = false
 
-// var opn = require('opn')
-// // automatically open browser, if not set will be false
-// var autoOpenBrowser = !!config.dev.autoOpenBrowser
-// var uri = 'http://localhost:4000'
+// automatically open browser, if not set will be false
+var autoOpenBrowser = !!config.dev.autoOpenBrowser
+var autoOpenDelay = config.dev.autoOpenDelay
 
 webpack(webpackConfig, function (err, stats) {
 
-  // // when env is testing, don't need open it
-  // if (pristine && autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
-  //   opn(uri)
-  // }
+  // when env is testing, don't need open it
+  if (pristine && process.env.NODE_ENV !== 'testing') {
+    require('./open-browser')(autoOpenBrowser, autoOpenDelay)
+  }
 
   spinner.stop()
   if (err) throw err
@@ -50,7 +49,7 @@ webpack(webpackConfig, function (err, stats) {
   console.log(chalk.cyan('\n  Build complete.\n'))
   pristine && console.log(chalk.yellow(
     '  Tip: built files are meant to be served over Koa-grace server.\n' +
-    '  Opening index.html over file:// won\'t work.\n',
+    '  Opening index.html over file:// won\'t work.',
     (function(){pristine = false})() || ''
   ))
 })

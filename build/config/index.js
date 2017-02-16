@@ -7,7 +7,7 @@ var projectRoot = path.resolve(__dirname, '../..'),
  * Check for server folder & get its path
  * @value graceServer 
  * @params serverRoot
- * @params serverJson
+ * @params serverConf
  */
 var graceServer = require('../check-server')(graceRoot)
 
@@ -15,6 +15,8 @@ var baseConf = {
       // Get module name automatically OR set manually
       moduleName: path.basename(projectRoot),
       projectRoot: projectRoot,
+      serverRoot: graceServer.serverRoot,
+      serverConf: graceServer.serverConf,
       outputRoot: path.resolve(graceServer.serverRoot, path.relative(graceRoot, projectRoot)),
       entryTemplate: path.resolve(projectRoot, 'views/_common/_template.ejs')
     },
@@ -30,7 +32,8 @@ var baseConf = {
       assetsRoot: baseConf.outputRoot,
       assetsPublicPath: path.resolve('/', baseConf.moduleName) + '/',
       assetsSubDirectory: 'static',
-      autoOpenBrowser: true
+      autoOpenBrowser: true,
+      autoOpenDelay: 2000
     };
 
 module.exports = {

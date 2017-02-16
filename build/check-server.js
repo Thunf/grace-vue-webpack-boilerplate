@@ -12,18 +12,19 @@ function callback(cb) {
 
 // 匹配grace下配置目录
 function matchServerJson(graceRoot) {
-  return glob.sync(path.join(graceRoot, '**/config/server.json')) || []
+  return glob.sync(path.join(graceRoot, '**/config/main.development.js')) || []
 }
 
 // 匹配grace目录
 function findServerFolder(graceRoot, scb, ecb) {
-  var jsonMatch = matchServerJson(graceRoot);
-  (1 === jsonMatch.length) ? callback(scb)({
-    serverRoot: path.resolve(jsonMatch[0], '../..'),
-    serverJson: jsonMatch[0]
+  var confMatch = matchServerJson(graceRoot);
+  (1 === confMatch.length) ? callback(scb)({
+    serverRoot: path.resolve(confMatch[0], '../..'),
+    serverConf: confMatch[0]
   }) : callback(ecb)(false)
 }
 
+// 匹配中文系统
 function matchSysLang_zh() {
   var langConf = exec('command -v env && env | grep LANG').toString().toLowerCase()
   return /(zh|cn)/.test(langConf)
