@@ -12,7 +12,7 @@ function callback(cb) {
 
 // 匹配grace下配置目录
 function matchServerJson(graceRoot) {
-  return glob.sync(path.join(graceRoot, '**/config/main.development.js')) || []
+  return glob.sync(path.join(graceRoot, '*/config/main.development.js')) || []
 }
 
 // 匹配grace目录
