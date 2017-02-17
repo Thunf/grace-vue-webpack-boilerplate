@@ -18,9 +18,9 @@ Make sure you have read it!
 
 ``` bash
 cd ~/fe/app/
-git clone git@github.com:Thunf/grace-vue-webpack-boilerplate.git <folder: any-name-u-want>
+git clone git@github.com:Thunf/grace-vue-webpack-boilerplate.git grace-project
 
-cd <folder: any-name-u-want>
+cd grace-project
 npm install
 
 npm run dev

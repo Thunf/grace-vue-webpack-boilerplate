@@ -17,11 +17,11 @@ function matchServerJson(graceRoot) {
 
 // 匹配grace目录
 function findServerFolder(graceRoot, scb, ecb) {
-  var confMatch = matchServerJson(graceRoot);
-  (1 === confMatch.length) ? callback(scb)({
+  var confMatch = matchServerJson(graceRoot)
+  ;(1 === confMatch.length) ? callback(scb)({
     serverRoot: path.resolve(confMatch[0], '../..'),
     serverConf: confMatch[0]
-  }) : callback(ecb)(false)
+  }) : callback(ecb)(confMatch.length)
 }
 
 // 匹配中文系统

@@ -84,6 +84,6 @@ module.exports = function(autoOpenBrowser, autoOpenDelay) {
   })
 
   autoOpenBrowser && setTimeout(function(){
-     opn(uri)
+     opn( path.join(uri, config.dev.autoOpenPage || '') )
   }, autoOpenDelay)
 }

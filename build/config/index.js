@@ -33,7 +33,8 @@ var baseConf = {
       assetsPublicPath: path.resolve('/', baseConf.moduleName) + '/',
       assetsSubDirectory: 'static',
       autoOpenBrowser: true,
-      autoOpenDelay: 2000
+      autoOpenDelay: 2000,
+      autoOpenPage: 'home'
     };
 
 module.exports = {
