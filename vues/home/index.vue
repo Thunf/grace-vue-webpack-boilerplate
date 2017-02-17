@@ -1,12 +1,19 @@
 <template>
   <div id="home">
-    <router-view></router-view>
+    <router-view>
+      <grace></grace>
+    </router-view>
   </div>
 </template>
 
 <script>
+import Grace from 'components/grace.vue'
+
 export default {
-  name: 'home'
+  name: 'home',
+  components: {
+    Grace
+  }
 }
 </script>
 

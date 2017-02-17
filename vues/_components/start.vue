@@ -23,6 +23,7 @@
       <a href="https://github.com/Thunf/grace-vue-webpack-boilerplate" target="_blank">repository</a>.
     </p>
 
+    <slot></slot>
 
     <h2>Essential Links</h2>
     <ul>
@@ -36,6 +37,9 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <br> 
+    <br> 
+    <br> 
 
   </div>
 </template>
