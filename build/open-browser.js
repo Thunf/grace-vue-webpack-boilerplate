@@ -72,11 +72,12 @@ module.exports = function(autoOpenBrowser, autoOpenDelay) {
   host = lookForHost(loopKey(serverConf, ['vhost']), autoOpenBrowser)
   autoOpenDelay = +autoOpenDelay || 2000
 
-  var uri = ['http://', host, ':', port ].join('');
+  var uri = ['http://', host, ':', port ].join('')
+  var uri2show = chalk.green(chalk.underline(uri))
   var tip = autoOpenBrowser ? [
-    '> Browser will open ' + chalk.green(uri) + ' in ' + autoOpenDelay/1000 + 's 🔍 \n'
+    '> Browser will open ' + uri2show + ' in ' + autoOpenDelay/1000 + 's 🔍 \n'
   ] : ('string' === typeof host) ? [
-    '> Page is running at ' + chalk.green(uri) + ' 🔍 \n'
+    '> Page is running at ' + uri2show + ' 🔍 \n'
   ] : host;
 
   setTimeout(function(){
