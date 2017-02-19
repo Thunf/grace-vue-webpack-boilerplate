@@ -34,7 +34,8 @@ var baseConf = {
       assetsSubDirectory: 'static',
       autoOpenBrowser: true,
       autoOpenDelay: 2000,
-      autoOpenPage: 'home'
+      autoOpenPage: 'home',
+      avoidTerminalColorGray: false
     };
 
 module.exports = {

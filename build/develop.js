@@ -6,6 +6,12 @@ if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 
+// some terminal can't show color gray, avoid if here
+// https://github.com/royriojas/eslint-friendly-formatter/blob/master/index.js#L35
+if (config.dev.avoidTerminalColorGray) {
+  process.env.EFF_NO_GRAY = true
+}
+
 var ora = require('ora')
 var path = require('path')
 var chalk = require('chalk')
