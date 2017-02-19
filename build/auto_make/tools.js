@@ -91,19 +91,30 @@ export default {
 <style lang="less">
 </style>
 `);
+
+fs.writeFileSync(srcPath + name + '/components/'+name+'.vue', `<template>
+  <div class="${name}">
+  </div>
+</template>
+
+<script>
+export default {
+  components: {
+  }
 }
+</script>
+
+<style lang="less">
+</style>
+`);
+}
+
 
 let _autoMakeRouter = function (name) {
 fs.writeFileSync(srcPath + name + '/router.js', `module.exports = {
   routes: [{
     path: '/',
-    component: {
-      template: \`
-        <h1>
-          put your component here
-        </h1>
-      \`
-    }
+    component: require('./components/${name}.vue')
   }, {
     path: '*',
     redirect: '/'
