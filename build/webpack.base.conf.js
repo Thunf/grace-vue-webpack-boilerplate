@@ -55,6 +55,8 @@ module.exports = {
   },
   module: {
     rules: [
+      /* ==================== eslint =================== */ 
+      /* If eslint makes you mad, just delete these code */
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
@@ -64,6 +66,7 @@ module.exports = {
           formatter: require('eslint-friendly-formatter')
         }
       },
+      /* ================== eslint end ================= */
       {
         test: /\.vue$/,
         loader: 'vue-loader',
