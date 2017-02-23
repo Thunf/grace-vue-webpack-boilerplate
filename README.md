@@ -1,8 +1,12 @@
 # grace-vue-webpack-boilerplate
 
-> A boilerplate for vue-webpack-project run with [koa-grace](https://github.com/xiongwilee/koa-grace), build with multiple entry
+<p align="center"><img width="75%" src="http://7xrhcw.com1.z0.glb.clouddn.com/grace_vue2_boilerplate2.jpg" /></p>
 
-> **Compatibility Note:** In this branch `Vue@2.x supported 🚀`
+A boilerplate for vue-webpack-project run with [koa-grace](https://github.com/xiongwilee/koa-grace), setup with Multiple entry.
+
+> **Compatibility Note:** 
+- In this branch **`Vue@2.x supported 🚀`**
+- 1.x Please see the version [boilerplate@v1.x](https://github.com/Thunf/grace-vue-webpack-boilerplate/tree/v1.x)
 
 
 ## Related Documentation
@@ -12,6 +16,11 @@ This boilerplate should run with [Koa-grace](https://github.com/xiongwilee/koa-g
 Koa-grace is a new generation Nodejs SFB`(Separation of Front and Back ends)` framework.
 
 Make sure you have read it!
+
+
+## Related Articles
+
+[前后端分离之路 - Vue2项目多入口模板改造方案🚀](http://thunf.me/2017/02/17/20170217-grace-vue-boilerplate/)
 
 
 ## Usage
