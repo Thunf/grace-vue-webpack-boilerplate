@@ -1,6 +1,7 @@
 <template>
   <div id="demo">
-    <img class="logo" src="~image/logo-grace.png" width="50%">
+    <!-- Same effect, but alias write less -->
+    <img class="logo" src="../../static/image/logo-grace.png" width="50%">
     <img class="logo" src="~image/logo.png">
     <h1>
       Welcome to start your Vue2 app <br> with Koa-grace! 
