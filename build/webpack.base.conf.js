@@ -1,4 +1,5 @@
 var path = require('path')
+var shell = require('shelljs')
 var utils = require('./utils')
 var config = require('./config')
 var vueLoaderConfig = require('./vue-loader.conf')
@@ -8,23 +9,27 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-function exec (cmd) {
-  return require('child_process').execSync(cmd).toString().trim()
-}
 /**
  * [entries 入口合成器]
  * @param  {object} opt 指定的入口，优先级高于自动抓取入口
  * @return {object}     返回合成的入口对象
  */
 function entries (opt) {
-  var ens = exec('cd ./vues && ls').split('\n').map(function(item) {
+  // cd vues
+  shell.cd('./vues');
+
+  var ens = shell.ls().map(function(item) {
     var obj = {};
     // 将忽略所有以下划线“_”开头的文件夹
     if (!/^_[\w-]+$/.test(item)) {
-      obj[item] = './vues/'+item+'/'
+      obj[item] = './vues/'+item+'/';
     }
-    return obj
+    return obj;
   });
+
+  // have to return dir
+  shell.cd('..');
+
   return Object.assign.apply(null, [].concat(ens, opt));
 }
 

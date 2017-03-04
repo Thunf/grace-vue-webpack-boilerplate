@@ -1,10 +1,7 @@
 var glob = require('glob')
 var path = require('path')
 var chalk = require('chalk')
-
-function exec (cmd) {
-  return require('child_process').execSync(cmd).toString().trim()
-}
+var shell = require('shelljs')
 
 function callback(cb) {
   return 'function' === typeof cb ? cb : function(){;}
@@ -26,7 +23,13 @@ function findServerFolder(graceRoot, scb, ecb) {
 
 // 匹配中文系统
 function matchSysLang_zh() {
-  var langConf = exec('command -v env && env | grep LANG').toString().toLowerCase()
+  var langConf = 'en';
+  if (shell.which('env')) {
+    langConf = shell.exec('env', { silent: true })
+                    .grep('LANG')
+                    .toString()
+                    .toLowerCase()
+  }
   return /(zh|cn)/.test(langConf)
 }
 
@@ -50,14 +53,15 @@ module.exports = function (graceRoot) {
       zh: [
         "未匹配到Koa-grace正确的目录结构，请" + chalk.red("调整目录结构") + "后重试！",
         "请参考：",
-        chalk.green("https://github.com/xiongwilee/koa-grace/tree/v2.x#目录结构-1 ")
+        chalk.underline(
+          chalk.green("https://github.com/xiongwilee/koa-grace/tree/v2.x#目录结构-1 ")
+        )
       ]
     }
 
     warnings.push.call(warnings, message[matchSysLang_zh() ? 'zh' : 'en'].join('\n  '))
 
-  })
-
+  });
 
   if (warnings.length) {
     console.log('')
