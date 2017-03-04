@@ -23,14 +23,14 @@ var baseConf = {
     buildConf = {
       env: require('./prod.env'),
       assetsRoot: baseConf.outputRoot,
-      assetsPublicPath: path.resolve('/', baseConf.moduleName) + '/',
+      assetsPublicPath: path.posix.join('/', baseConf.moduleName, '/'),
       assetsSubDirectory: 'static',
       productionSourceMap: false || !!process.env.npm_config_map
     },
     devConf = {
       env: require('./dev.env'),
       assetsRoot: baseConf.outputRoot,
-      assetsPublicPath: path.resolve('/', baseConf.moduleName) + '/',
+      assetsPublicPath: path.posix.join('/', baseConf.moduleName, '/'),
       assetsSubDirectory: 'static',
       autoOpenBrowser: true,
       autoOpenDelay: 2000,
