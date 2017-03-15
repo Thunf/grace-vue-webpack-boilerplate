@@ -5,6 +5,7 @@
   "author": "Thunf <458859360@qq.com>",
   "private": true,
   "scripts": {
+    "new": "node build/new.js",
     "dev": "node build/develop.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "ansi-html": "^0.0.7",
     "ansi-regex": "^2.1.1",
+    "async": "^2.1.5",
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -50,6 +52,7 @@
     "html-entities": "^1.2.0",
     "html-webpack-plugin": "^2.28.0",
     "inject-loader": "^2.0.1",
+    "inquirer": "^0.12.0",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "lolex": "^1.5.2",
