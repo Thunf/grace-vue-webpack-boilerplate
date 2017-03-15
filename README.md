@@ -25,6 +25,7 @@ Make sure you have read it!
 
 ## Usage
 
+### Start
 ``` bash
 cd ~/fe/app/
 git clone git@github.com:Thunf/grace-vue-webpack-boilerplate.git grace-project
@@ -36,6 +37,23 @@ npm run dev
 ```
 
 - `~/fe/app/` is applications' src folder in koa-grace project, see [folder structure - 目录结构](https://github.com/xiongwilee/koa-grace/tree/v2.x#目录结构-1)
+
+
+### New files
+```
+npm run new
+
+> ?type: // select a mode
+ > init both controller & vue 
+   init controller only 
+   init vue files only 
+> ?name: // get column name
+```
+
+### Build
+```
+npm run build
+```
 
 
 ## What's Included
