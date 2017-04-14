@@ -7,7 +7,7 @@
 # 3、编译最终的目的是在server/app产出编译之后的文件
 # 完成编译
 # ====================================================
-mod="grace_boilerplate"
+mod=`node -p "require('./build/config/index.js').base.moduleName"`
 
 # 编译当前代码
 npm run build
