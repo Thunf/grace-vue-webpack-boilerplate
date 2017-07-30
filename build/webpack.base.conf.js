@@ -2,6 +2,7 @@ var path = require('path')
 var shell = require('shelljs')
 var utils = require('./utils')
 var config = require('./config')
+var webpack = require('webpack')
 var vueLoaderConfig = require('./vue-loader.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -109,6 +110,9 @@ module.exports = {
     ]
   },
   plugins: [
+    // webpack3 - scope hoisting
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    // copy files
     new CopyWebpackPlugin([
       { from: { glob: './controller/**/*' }, to: `${config.base.outputRoot}`},
       { from: { glob: './deploy/**/*' }, to: `${config.base.outputRoot}` },
