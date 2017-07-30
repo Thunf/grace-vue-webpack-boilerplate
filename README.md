@@ -28,10 +28,12 @@ Make sure you have read it!
 ### Start
 ``` bash
 cd ~/fe/app/
-git clone git@github.com:Thunf/grace-vue-webpack-boilerplate.git grace-project
+git clone git@github.com:Thunf/grace-vue-webpack-boilerplate.git
 
-cd grace-project
-npm install
+cd grace-vue-webpack-boilerplate
+
+yarn
+// or: npm install
 
 npm run dev
 ```
