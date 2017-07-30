@@ -8,6 +8,13 @@
       <i class="iconfont icon-Expression_"></i>
     </h1>
     <p>
+      Examples: 
+      <a href="/demo">simple demo</a>、
+      <a :href="page404">404Page</a>、
+      <br>
+      <a href="/examples">examples with third-party components</a>
+    </p>
+    <p>
       To get a better understanding of how this boilerplate works, 
       <br> check out 
       <a href="http://vuejs-templates.github.io/webpack" target="_blank">its documentation</a>.
@@ -50,6 +57,11 @@ export default {
   data () {
     return {
       title: 'demo'
+    }
+  },
+  computed: {
+    page404 () {
+      return `/${Math.random().toString(36).substring(2, 6)}`
     }
   }
 }
