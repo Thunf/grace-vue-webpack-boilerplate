@@ -13,7 +13,11 @@ import App from './index.vue'
  * 1、按需引用（减少不必要的组件引用）
  * 2、统一管理（不用每个vue都import）
  */
+// vux
 import vux from './components/vux'
+// iview
+import './components/iview/index.less'
+import iView from './components/iview'
 
 // 初始化路由
 const router = new VueRouter(routes)
@@ -30,6 +34,7 @@ router.beforeEach((to, from, next) => {
 // 置入组件
 Vue.use(VueResource)
 Vue.use(VueRouter)
+Vue.use(iView)
 Vue.use(vux)
 
 new Vue({
