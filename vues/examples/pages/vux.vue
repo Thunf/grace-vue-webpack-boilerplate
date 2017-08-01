@@ -57,11 +57,21 @@ export default {
   methods: {
     getPageData () {
       this.$get(`/ajax/test/${new Date()}`, ({ code, data }) => {
+        const _this = this
         this.$log(data.text)
         this.resList.push(data.text)
         this.countupStart = true
         const image = window.document.querySelector('.swiper-image')
         this.swiperList.push(image && image.src)
+        this.$vux.alert.show({
+          title: 'hello',
+          onShow () {
+            _this.$info('alert show')
+          },
+          onHide () {
+            _this.$error('alert hide')
+          }
+        })
       })
     }
   }
