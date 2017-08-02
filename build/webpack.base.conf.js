@@ -3,6 +3,7 @@ var shell = require('shelljs')
 var utils = require('./utils')
 var config = require('./config')
 var webpack = require('webpack')
+const vuxLoader = require('vux-loader')
 var vueLoaderConfig = require('./vue-loader.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -34,7 +35,7 @@ function entries (opt) {
   return Object.assign.apply(null, [].concat(ens, opt));
 }
 
-module.exports = {
+const webpackConfig = {
   entry: entries({
     // 此处可以手动指定其他需打包的页面/文件入口
     // folderName: './vues/folderName'
@@ -122,3 +123,24 @@ module.exports = {
     ])
   ]
 }
+
+module.exports = vuxLoader.merge(webpackConfig, {
+  options: {
+    env: process.env.NODE_ENV
+  },
+  plugins: [{
+    name: 'vux-ui'
+  }, {
+    name: 'less-theme',
+    path: 'static/css/vux/theme.less'
+  }, {
+    name: 'duplicate-style',
+    envs: ['production'],
+    events: {
+      done () {
+        console.log('done!')
+      }
+    }
+  }]
+})
+

@@ -3,7 +3,6 @@ var utils = require('./utils')
 var config = require('./config')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
-const vuxLoader = require('vux-loader')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -66,9 +65,4 @@ var webpackConfig = merge(utils.setEntrys(baseWebpackConfig), {
   ]
 })
 
-// module.exports = webpackConfig
-// if load vux, do like this:
-module.exports = vuxLoader.merge(webpackConfig, {
-  plugins: ['vux-ui']
-})
-
+module.exports = webpackConfig

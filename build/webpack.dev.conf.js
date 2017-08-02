@@ -19,7 +19,8 @@ module.exports = merge(utils.setEntrys(baseWebpackConfig), {
     chunkFilename: utils.assetsPath('js/[id]/chunk.js?[chunkhash:10]')
   },
   // cheap-module-eval-source-map is faster for development
-  devtool: '#cheap-module-eval-source-map',
+  // =============== 建议调试无法定位的问题时使用，项目越大越卡 ===============
+  // devtool: '#cheap-module-eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env
