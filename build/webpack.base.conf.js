@@ -120,7 +120,12 @@ const webpackConfig = {
       { from: { glob: './mock/**/*' }, to: `${config.base.outputRoot}` },
       { from: { glob: './views/**/!(_*)' }, to: `${config.base.outputRoot}` },
       { from: { glob: './static/**/!(_*)' }, to: `${config.base.outputRoot}` }
-    ])
+    ], {
+      ignore: [
+        '*.less',
+        '*.vue',
+      ]
+    })
   ]
 }
 
