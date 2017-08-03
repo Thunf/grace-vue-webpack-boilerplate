@@ -19,14 +19,14 @@ import vux from './components/vux'
 import './components/iview/index.less'
 import iView from './components/iview'
 
+// FIX:部分app内title更新问题
+import { update } from 'components/libs/title.js'
+
 // 初始化路由
 const router = new VueRouter(routes)
 router.beforeEach((to, from, next) => {
-  const title = to && to.meta && to.meta.title
-  const titleDom = title && window.document.querySelector('title')
-  if (titleDom) {
-    titleDom.text = title
-  }
+  // 更新页面title
+  update(to && to.meta && to.meta.title)
   // 确保一定要调用 next()
   next()
 })
