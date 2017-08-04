@@ -1,4 +1,11 @@
 /* eslint-disable */
+
+/**
+ * [update 更新页面title]
+ * @problem  微信/支付宝：document.title没法实时更新title
+ * @resolve  通过iframe的加载，让webview更新title
+ * @return
+ */
 function update (title) {
   var doc = window.document
   if (!title || doc.title === title) return
