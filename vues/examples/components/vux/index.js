@@ -4,7 +4,7 @@
 // import Actionsheet from 'vux/src/components/actionsheet/index.vue';
 // import Agree from 'vux/src/components/agree/index.vue';
 // import AjaxPlugin from 'vux/src/plugins/ajax/index.js';
-import Alert from 'vux/src/components/alert/index.vue';
+// import Alert from 'vux/src/components/alert/index.vue';
 import AlertPlugin from 'vux/src/plugins/alert/index.js';
 // import AppPlugin from 'vux/src/plugins/app/index.js';
 // import Array2stringFilter from 'vux/src/filters/array2String.js';
@@ -138,8 +138,8 @@ const vux = {
   // Actionsheet,
   // Agree,
   // AjaxPlugin,
-  Alert,
-  AlertPlugin,
+  // Alert,
+  // AlertPlugin,
   // AppPlugin,
   // Array2stringFilter,
   // Badge,
@@ -277,7 +277,7 @@ const install = function (Vue) {
     Vue.component(key, vux[key]);
   });
 
-  Vue.use(vux['AlertPlugin']);
+  Vue.use(AlertPlugin);
   
   // Vue.prototype.$Loading = LoadingBar;
   // Vue.prototype.$Message = Message;
