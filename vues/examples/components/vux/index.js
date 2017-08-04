@@ -110,7 +110,7 @@ import SwiperItem from 'vux/src/components/swiper/swiper-item.vue';
 // import TimelineItem from 'vux/src/components/timeline/timeline-item.vue';
 // import Tip from 'vux/src/components/tip/index.vue';
 // import Toast from 'vux/src/components/toast/index.vue';
-// import ToastPlugin from 'vux/src/plugins/toast/index.js';
+import ToastPlugin from 'vux/src/plugins/toast/index.js';
 // import TransferDom from 'vux/src/directives/transfer-dom/index.js';
 // import TransferDomDirective from 'vux/src/directives/transfer-dom/index.js';
 // import Value2nameFilter from 'vux/src/filters/value2name.js';
@@ -133,6 +133,8 @@ import SwiperItem from 'vux/src/components/swiper/swiper-item.vue';
 // import XSwitch from 'vux/src/components/x-switch/index.vue';
 // import XTable from 'vux/src/components/x-table/index.vue';
 // import XTextarea from 'vux/src/components/x-textarea/index.vue';
+
+import { space } from 'components/vux/lib.js';
 
 const vux = {
   // Actionsheet,
@@ -278,6 +280,8 @@ const install = function (Vue) {
   });
 
   Vue.use(AlertPlugin);
+  Vue.use(ToastPlugin);
+  Vue.prototype.$space = space;
   
   // Vue.prototype.$Loading = LoadingBar;
   // Vue.prototype.$Message = Message;

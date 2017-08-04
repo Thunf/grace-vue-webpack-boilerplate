@@ -70,6 +70,9 @@ export default {
           },
           onHide () {
             _this.$error('alert hide')
+            setTimeout(() => {
+              _this.$vux.toast.text(_this.$space('Alert已关闭'), 'bottom')
+            }, 500)
           }
         })
       })
