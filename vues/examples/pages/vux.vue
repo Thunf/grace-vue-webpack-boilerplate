@@ -67,6 +67,7 @@ export default {
           title: 'hello',
           onShow () {
             _this.$info('alert show')
+            _this.showConfirm()
           },
           onHide () {
             _this.$error('alert hide')
@@ -75,6 +76,18 @@ export default {
             }, 500)
           }
         })
+      })
+    },
+    showConfirm () {
+      const _this = this
+      this.$vux.confirm.show({
+        title: 'Hello',
+        content: 'World !',
+        confirmText: 'Yes',
+        cancelText: 'No',
+        onConfirm () {
+          _this.$info('confirm !')
+        }
       })
     }
   }

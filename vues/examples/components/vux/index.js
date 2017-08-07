@@ -31,7 +31,7 @@ import AlertPlugin from 'vux/src/plugins/alert/index.js';
 // import Clocker from 'vux/src/components/clocker/index.vue';
 // import ColorPicker from 'vux/src/components/color-picker/index.vue';
 // import Confirm from 'vux/src/components/confirm/index.vue';
-// import ConfirmPlugin from 'vux/src/plugins/confirm/index.js';
+import ConfirmPlugin from 'vux/src/plugins/confirm/index.js';
 // import cookie from 'vux/src/tools/cookie/index.js';
 // import Countdown from 'vux/src/components/countdown/index.vue';
 import Countup from 'vux/src/components/countup/index.vue';
@@ -280,6 +280,7 @@ const install = function (Vue) {
   });
 
   Vue.use(AlertPlugin);
+  Vue.use(ConfirmPlugin);
   Vue.use(ToastPlugin);
   Vue.prototype.$space = space;
   
