@@ -25,7 +25,7 @@ Make sure you have read it!
 - [x] Upgrade [Webpack][url_webpack] to version 3.
 - [x] [History API][url_history] example. [commit🚀](https://github.com/Thunf/grace-vue-webpack-boilerplate/commit/b15ea09b471ca5aa9817400f65a671beb6ffb7d7) 
 - [ ] [Vuex][url_vuex] example.
-- [x] Hot reload.
+- [ ] [Hot reload][url_hotreload].
 
 [url_eslint]: https://github.com/eslint/eslint
 [url_vux]: https://github.com/airyland/vux
@@ -34,7 +34,7 @@ Make sure you have read it!
 [url_webpack]: https://github.com/webpack/webpack
 [url_history]: https://router.vuejs.org/zh-cn/essentials/history-mode.html
 [url_vuex]: https://github.com/vuejs/vuex
-
+[url_hotreload]: https://github.com/glenjamin/webpack-hot-middleware
 
 ## Usage
 
