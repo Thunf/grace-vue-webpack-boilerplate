@@ -8,7 +8,6 @@ A boilerplate for vue-webpack-project run with [koa-grace](https://github.com/xi
 - In this branch **`Vue@2.x supported 🚀`**
 - 1.x Please see the version [boilerplate@v1.x](https://github.com/Thunf/grace-vue-webpack-boilerplate/tree/v1.x)
 
-
 ## Related Documentation
 
 This boilerplate should run with [Koa-grace](https://github.com/xiongwilee/koa-grace). 
@@ -18,9 +17,23 @@ Koa-grace is a new generation Nodejs SFB`(Separation of Front and Back ends)` fr
 Make sure you have read it!
 
 
-## Related Articles
+## Features
+- [x] Multiple entry.
+- [x] Code linting: [ESlint][url_eslint].
+- [x] Inject component libraries at the same time. (**PR is welcome**) 
+  - such as [vux][url_vux] / [iview][url_iview] / [element][url_element]
+- [x] Upgrade [Webpack][url_webpack] to version 3.
+- [x] [History API][url_history] example. [commit🚀](https://github.com/Thunf/grace-vue-webpack-boilerplate/commit/b15ea09b471ca5aa9817400f65a671beb6ffb7d7) 
+- [ ] [Vuex][url_vuex] example.
+- [x] Hot reload.
 
-[前后端分离之路 - Vue2项目多入口模板改造方案🚀](http://thunf.me/2017/02/17/20170217-grace-vue-boilerplate/)
+[url_eslint]: https://github.com/eslint/eslint
+[url_vux]: https://github.com/airyland/vux
+[url_iview]: https://github.com/iview/iview
+[url_element]: https://github.com/ElemeFE/element
+[url_webpack]: https://github.com/webpack/webpack
+[url_history]: https://router.vuejs.org/zh-cn/essentials/history-mode.html
+[url_vuex]: https://github.com/vuejs/vuex
 
 
 ## Usage
@@ -56,6 +69,11 @@ npm run new
 ```
 npm run build
 ```
+
+
+## Related Articles
+
+[前后端分离之路 - Vue2项目多入口模板改造方案🚀](http://thunf.me/2017/02/17/20170217-grace-vue-boilerplate/)
 
 
 ## What's Included
