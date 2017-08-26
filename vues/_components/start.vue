@@ -10,7 +10,9 @@
     <p>
       Examples: 
       <a href="/demo">simple demo</a>、
-      <a :href="page404">404Page</a>、
+      <a :href="page404">404Page</a>
+      <br>
+      <a href="/history">examples with history mode</a>、
       <br>
       <a href="/examples">examples with third-party components</a>
     </p>
