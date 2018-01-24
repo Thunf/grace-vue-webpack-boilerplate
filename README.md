@@ -73,7 +73,7 @@ npm run build
 
 ## Related Articles
 
-[前后端分离之路 - Vue2项目多入口模板改造方案🚀](http://thunf.me/2017/02/17/20170217-grace-vue-boilerplate/)
+[前后端分离之路 - Vue2项目多入口模板改造方案🚀](https://blog.thunf.cn/2017/02/17/20170217-grace-vue-boilerplate/)
 
 
 ## What's Included
