@@ -14,7 +14,7 @@
       <br>
       <a href="/history">examples with history mode</a>、
       <br>
-      <a href="/examples">examples with third-party components</a>
+      <a href="/third_party_library">examples with third-party components</a>
     </p>
     <p>
       To get a better understanding of how this boilerplate works, 
