@@ -14,6 +14,8 @@
       <br>
       <a href="/history">examples with history mode</a>、
       <br>
+      <a href="/async_components">examples with async components</a>、
+      <br>
       <a href="/third_party_library">examples with third-party components</a>
     </p>
     <p>
