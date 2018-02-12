@@ -87,6 +87,10 @@ const webpackConfig = {
         options: vueLoaderConfig
       },
       {
+        test: /iview.src.*?js$/,
+        loader: 'babel-loader'
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('vues'), resolve('test')],
