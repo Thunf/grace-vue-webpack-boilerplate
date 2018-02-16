@@ -24,6 +24,7 @@ Make sure you have read it!
   - such as [vux][url_vux] / [iview][url_iview] / [element][url_element]
 - [x] Upgrade [Webpack][url_webpack] to version 3.
 - [x] [History API][url_history] example. [commit🚀](https://github.com/Thunf/grace-vue-webpack-boilerplate/commit/b15ea09b471ca5aa9817400f65a671beb6ffb7d7) 
+- [x] [Lazy-loading for Router & Components][url_async] Combining Vue's async component feature and webpack's code splitting feature.  
 - [ ] [Vuex][url_vuex] example.
 - [ ] [Hot reload][url_hotreload].
 
@@ -33,6 +34,7 @@ Make sure you have read it!
 [url_element]: https://github.com/ElemeFE/element
 [url_webpack]: https://github.com/webpack/webpack
 [url_history]: https://router.vuejs.org/zh-cn/essentials/history-mode.html
+[url_async]: https://router.vuejs.org/zh-cn/advanced/lazy-loading.html
 [url_vuex]: https://github.com/vuejs/vuex
 [url_hotreload]: https://github.com/glenjamin/webpack-hot-middleware
 
