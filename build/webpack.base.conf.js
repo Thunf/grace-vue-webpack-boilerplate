@@ -61,6 +61,7 @@ const webpackConfig = {
     ],
     alias: {
       'vue$': 'vue/dist/vue.common.js',
+      'vuex$': 'vuex/dist/vuex.esm.js',
       'vues': resolve('vues'),
       'static': resolve('static'),
       'image': resolve('static/image'),
