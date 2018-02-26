@@ -24,8 +24,8 @@ Make sure you have read it!
   - such as [vux][url_vux] / [iview][url_iview] / [element][url_element]
 - [x] Upgrade [Webpack][url_webpack] to version 3.
 - [x] [History API][url_history] example. [commit🚀](https://github.com/Thunf/grace-vue-webpack-boilerplate/commit/b15ea09b471ca5aa9817400f65a671beb6ffb7d7) 
-- [x] [Lazy-loading for Router & Components][url_async] Combining Vue's async component feature and webpack's code splitting feature.  
-- [ ] [Vuex][url_vuex] example.
+- [x] [Async-loading][url_async] Combining Vue's async component feature and webpack's code splitting feature.  
+- [x] [Vuex][url_vuex] todomvc example with vuex. [commit🚀](https://github.com/Thunf/grace-vue-webpack-boilerplate/commit/17460a0e8f6c0180340eb4c6be063cf6731e1d90) 
 - [ ] [Hot reload][url_hotreload].
 
 [url_eslint]: https://github.com/eslint/eslint
