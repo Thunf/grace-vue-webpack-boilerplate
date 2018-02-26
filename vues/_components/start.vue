@@ -12,6 +12,8 @@
       <a href="/demo">simple demo</a>、
       <a :href="page404">404Page</a>
       <br>
+      <a href="/vuex">examples with vuex</a>、
+      <br>
       <a href="/history">examples with history mode</a>、
       <br>
       <a href="/async_components">examples with async components</a>、
